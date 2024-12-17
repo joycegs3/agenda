@@ -143,17 +143,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AgendaModelResponseModel"
+                  "$ref": "#/components/schemas/AgendaModelListResponseModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AgendaModelResponseModel"
+                  "$ref": "#/components/schemas/AgendaModelListResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AgendaModelResponseModel"
+                  "$ref": "#/components/schemas/AgendaModelListResponseModel"
                 }
               }
             }
@@ -266,7 +266,7 @@
         }
       }
     },
-    "/api/Agenda/DeleteInformation": {
+    "/api/Agenda/DeleteInformation/{idInformation}": {
       "delete": {
         "tags": [
           "Agenda"
@@ -274,7 +274,8 @@
         "parameters": [
           {
             "name": "idInformation",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -529,9 +530,6 @@
           "phoneNumber": {
             "type": "string",
             "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/UserModel"
           }
         },
         "additionalProperties": false

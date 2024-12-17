@@ -24,7 +24,7 @@ namespace AgendaWebApplication.Controllers
         }
 
         [HttpGet("ListInformations")] 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<ResponseModel<List<AgendaModel>>>> ListInformations()
         {
 
@@ -51,7 +51,7 @@ namespace AgendaWebApplication.Controllers
 
         [HttpPost("CreateInformation")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<ResponseModel<AgendaModel>>> CreateInformation(AgendaCreationDto agendaCreationDto)
+        public async Task<ActionResult<ResponseModel<List<AgendaModel>>>> CreateInformation(AgendaCreationDto agendaCreationDto)
         {
             var informations = await _agendaInterface.CreateInformation(agendaCreationDto);
             return Ok(informations);
@@ -73,7 +73,7 @@ namespace AgendaWebApplication.Controllers
             return Ok(informations);
         }
 
-        [HttpDelete("DeleteInformation")]
+        [HttpDelete("DeleteInformation/{idInformation}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<ResponseModel<List<AgendaModel>>>> DeleteInformation(int idInformation)
         {

@@ -21,7 +21,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.PhoneNumber.Equals(phoneNumber));
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.PhoneNumber.Equals(phoneNumber));
 
                 if (information == null)
                 {
@@ -51,7 +51,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == idInformation);
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == idInformation);
 
                 if (information == null)
                 {
@@ -81,7 +81,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var informations = await _context.Agenda.Include(u => u.User).ToListAsync();
+                var informations = await _context.Agenda.ToListAsync();
 
                 response.Data = informations;
                 response.Message = "Contatos da agenda coletados com sucesso!";
@@ -135,7 +135,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == agendaUpdateDto.Id);
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == agendaUpdateDto.Id);
 
                 if (information == null)
                 {
@@ -151,7 +151,7 @@ namespace AgendaWebApplication.Services.Agenda
                 _context.Update(information);
                 await _context.SaveChangesAsync();
 
-                response.Data = await _context.Agenda.Include(u => u.User).ToListAsync();
+                response.Data = await _context.Agenda.ToListAsync();
                 response.Message = "Contato editado com sucesso!";
 
                 return response;
@@ -172,7 +172,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try 
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == idIfnormation);
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.Id == idIfnormation);
                 
                 if (information == null)
                 {
@@ -184,7 +184,7 @@ namespace AgendaWebApplication.Services.Agenda
                 _context.Agenda.Remove(information);
                 await _context.SaveChangesAsync();
 
-                response.Data = await _context.Agenda.Include(u => u.User).ToListAsync();
+                response.Data = await _context.Agenda.ToListAsync();
                 response.Message = "Contato removido com sucesso!";
 
                 return response;
@@ -205,7 +205,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.Email == email);
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.Email == email);
 
                 if (information == null)
                 {
@@ -221,7 +221,7 @@ namespace AgendaWebApplication.Services.Agenda
                 _context.Update(information);
                 await _context.SaveChangesAsync();
 
-                response.Data = await _context.Agenda.Include(u => u.User).ToListAsync();
+                response.Data = await _context.Agenda.ToListAsync();
                 response.Message = "Contato editado com sucesso!";
 
                 return response;
@@ -242,7 +242,7 @@ namespace AgendaWebApplication.Services.Agenda
 
             try
             {
-                var information = await _context.Agenda.Include(u => u.User).FirstOrDefaultAsync(informationDatabase => informationDatabase.Email == emailInformation);
+                var information = await _context.Agenda.FirstOrDefaultAsync(informationDatabase => informationDatabase.Email == emailInformation);
 
                 if (information == null)
                 {
@@ -254,7 +254,7 @@ namespace AgendaWebApplication.Services.Agenda
                 _context.Agenda.Remove(information);
                 await _context.SaveChangesAsync();
 
-                response.Data = await _context.Agenda.Include(u => u.User).ToListAsync();
+                response.Data = await _context.Agenda.ToListAsync();
                 response.Message = "Contato removido com sucesso!";
 
                 return response;

@@ -116,3 +116,4 @@ C:\Users\JoyceSantana\source\repos\AgendaWebApplication\AgendaWebApplication\obj
 C:\Users\JoyceSantana\source\repos\AgendaWebApplication\AgendaWebApplication\obj\Debug\net8.0\AgendaWebApplication.pdb
 C:\Users\JoyceSantana\source\repos\AgendaWebApplication\AgendaWebApplication\obj\Debug\net8.0\AgendaWebApplication.genruntimeconfig.cache
 C:\Users\JoyceSantana\source\repos\AgendaWebApplication\AgendaWebApplication\obj\Debug\net8.0\ref\AgendaWebApplication.dll
+C:\Users\JoyceSantana\source\repos\AgendaWebApplication\AgendaWebApplication\obj\Debug\net8.0\AgendaWebApplication.sourcelink.json

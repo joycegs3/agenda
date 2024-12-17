@@ -10,8 +10,8 @@ namespace AgendaWebApplication.Models
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public string Token { get; set; } = "";
-        [JsonIgnore]
+        //[JsonIgnore]
         //Relacionamento 1:N - Um usuário pode ter vários contatos
-        public ICollection<AgendaModel> Contacts { get; set; } = new List<AgendaModel>();
+        //public ICollection<AgendaModel> Contacts { get; set; } = new List<AgendaModel>();
     }
 }

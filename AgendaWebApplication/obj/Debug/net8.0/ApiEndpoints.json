@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,7 +28,7 @@
   {
     "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
     "Method": "DeleteInformation",
-    "RelativePath": "api/Agenda/DeleteInformation",
+    "RelativePath": "api/Agenda/DeleteInformation/{idInformation}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -36,7 +36,7 @@
       {
         "Name": "idInformation",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
