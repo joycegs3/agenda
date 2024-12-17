@@ -1,0 +1,302 @@
+[
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "CreateInformation",
+    "RelativePath": "api/Agenda/CreateInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agendaCreationDto",
+        "Type": "AgendaWebApplication.Dto.Agenda.AgendaCreationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "DeleteInformation",
+    "RelativePath": "api/Agenda/DeleteInformation",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idInformation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "DeleteInformationByEmail",
+    "RelativePath": "api/Agenda/DeleteInformationByEmail",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "emailInformation",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "EditInformation",
+    "RelativePath": "api/Agenda/EditInformation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agendaUpdateDto",
+        "Type": "AgendaWebApplication.Dto.Agenda.AgendaUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "EditInformationByEmail",
+    "RelativePath": "api/Agenda/EditInformationByEmail",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "agendaUpdateDto",
+        "Type": "AgendaWebApplication.Dto.Agenda.AgendaUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "ListById",
+    "RelativePath": "api/Agenda/ListById/{idInformation}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idInformation",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "ListByPhoneNumber",
+    "RelativePath": "api/Agenda/ListByPhoneNumber/{phoneNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.AgendaController",
+    "Method": "ListInformations",
+    "RelativePath": "api/Agenda/ListInformations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.UserController",
+    "Method": "GetCurentUser",
+    "RelativePath": "api/User/GetCurentUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[AgendaWebApplication.Models.UserModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.UserController",
+    "Method": "ListUsers",
+    "RelativePath": "api/User/ListUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[AgendaWebApplication.Models.AgendaModel, AgendaWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/Login/{email}/{password}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaWebApplication.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AgendaWebApplication.Models.UserModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgendaWebApplication.Models.UserModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

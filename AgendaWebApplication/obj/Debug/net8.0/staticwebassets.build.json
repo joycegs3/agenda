@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aMH68/iE2dfiiavkWlttZBLxi+57qsaWUb2DoMev/gs=",
+  "Source": "AgendaWebApplication",
+  "BasePath": "_content/AgendaWebApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
