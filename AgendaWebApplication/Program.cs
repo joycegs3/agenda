@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("SiteCorsPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:8080") // URL do frontend em Vue.js
+        policy.WithOrigins("http://localhost:8080", "http://localhost:8081", "http://localhost:8082") // URL do frontend em Vue.js
               .AllowAnyHeader()
               .WithHeaders("Content-Type", "Authorization")
               .AllowAnyMethod()

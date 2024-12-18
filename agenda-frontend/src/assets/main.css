@@ -12,7 +12,39 @@
   .app-font{
     font-family: "Open Sans", sans-serif;
   }
+
+  .p-dialog, .p-dialog-header, .p-dialog-content {
+    font-family: 'Roboto', sans-serif !important;
+  }
   
+
+.p-dialog .p-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-dialog .p-field label {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.p-dialog .p-field .p-inputtext {
+  width: 100%;
+}
+
+
+.p-dialog-content {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.p-dialog-title {
+  color: #16B684;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
   a,
   .green {
     text-decoration: none;
